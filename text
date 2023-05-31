@@ -40,22 +40,45 @@ registrovani_uzivatele = {
 
 # vyžádá si od uživatele přihlašovací jméno a heslo
 
-username = input("username:")
-password = input("password:")
+#username = input("username:")
+#password = input("password:")
 
-if username in registrovani_uzivatele.keys() and password in registrovani_uzivatele.values():
-    print("Welcome to the app,", username, "\n" "We have 3 texts to be analyzed.")
-else:
-    print("unregistered user, terminating the program..")
-print("_" * 40)
+#if username in registrovani_uzivatele.keys() and password in registrovani_uzivatele.values():
+    #print("Welcome to the app,", username, "\n" "We have 3 texts to be analyzed.")
+#else:
+    #print("unregistered user, terminating the program..")
+#print("_" * 40)
 
 # uživatel vybere mezi třemi texty v proměnné TEXTS
 
 #print(len(TEXTS))
 cislo_textu = int(input("Enter a number btw. 1 and 3 to select: "))
+text_1 = len(TEXTS[0].split())
+text_2 = len(TEXTS[1].split())
+text_3 = len(TEXTS[2].split())
 
-#if 0 < cislo_textu < 4:
-    #print("Enter a number btw. 1 and 3 to select:", cislo_textu)
-    #elif cislo_textu.isnumeric()
-    
-# program spočítá počet slov v TEXTU
+if 0 < cislo_textu < 4:
+    print("Enter a number btw. 1 and 3 to select:", cislo_textu)
+if cislo_textu == 1:
+    print("There are", text_1, "words in the selected text.")
+elif cislo_textu == 2:
+    print("There are", text_2, "words in the selected text.")
+elif cislo_textu == 3:
+    print("There are", text_3, "words in the selected text.")
+#elif cislo_textu != int()
+    #print("špatně")
+else:
+    print("False")
+
+# počet slov začínajících velkým písmenem
+velke = str(TEXTS[0].split())
+for slova in velke:
+    print(slova)
+
+
+
+
+
+
+
+
